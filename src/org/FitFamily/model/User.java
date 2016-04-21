@@ -1,0 +1,95 @@
+package org.FitFamily.model;
+
+import java.util.Date;
+import java.util.List;
+
+public class User {
+	/*Properties*/
+	private int id;
+	private String name;
+	private String lastname;
+	private String email;
+	private Date birthdate;
+	private Date created;
+	private Date updated;
+	private List<User> friends;
+	private List<Album> albums;
+	private List<Post> posts;
+	
+	/*Constructor*/
+	public User(int id, String name, String lastname, String email, Date birthdate) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.lastname = lastname;
+		this.email = email;
+		this.birthdate = birthdate;
+		this.created = new Date();
+		this.updated = new Date();
+		this.friends = null;
+		this.albums = null;
+		this.posts = null;
+	}
+	
+	/*Getters/Setters*/
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getLastname() {
+		return lastname;
+	}
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Date getBirthdate() {
+		return birthdate;
+	}
+	public void setBirthdate(Date birthdate) {
+		this.birthdate = birthdate;
+	}
+	public Date getCreated() {
+		return created;
+	}
+	public void setCreated(Date created) {
+		this.created = created;
+	}
+	public Date getUpdated() {
+		return updated;
+	}
+	public void setUpdated(Date updated) {
+		this.updated = updated;
+	}
+	public List<User> getFriends() {
+		return friends;
+	}
+	public void setFriends(List<User> friends) {
+		this.friends = friends;
+	}
+	public List<Album> getAlbums() {
+		return albums;
+	}
+	public void setAlbums(List<Album> albums) {
+		this.albums = albums;
+	}
+	public List<Post> getPosts() {
+		return posts;
+	}
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}	
+}
