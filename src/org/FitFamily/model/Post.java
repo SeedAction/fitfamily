@@ -1,6 +1,7 @@
 package org.FitFamily.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class Post {
 	/*Properties*/
@@ -9,15 +10,19 @@ public class Post {
 	private String content;
 	private Date created;
 	private Date updated;
+	private List<Comment> comments;
+	private int userId;
 	
 	/*Constructor*/
-	public Post(int id, String title, String content) {
+	public Post(int id, String title, String content, int userId) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.content = content;
 		this.created = new Date();
 		this.updated = new Date();
+		this.comments = null;
+		this.userId = userId;
 	}
 
 	/*Getters/Setters*/
@@ -50,5 +55,17 @@ public class Post {
 	}
 	public void setUpdated(Date updated) {
 		this.updated = updated;
+	}
+	public List<Comment> getComments() {
+		return comments;
+	}
+	public void setComments(List<Comment> comments) {
+		this.comments = comments;
+	}
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 }

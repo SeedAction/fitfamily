@@ -8,6 +8,19 @@ public class Comment {
 	private String content;
 	private Date created;
 	private Date updated;
+	private int userId;
+	private int postId;
+	
+	/*Constructor*/
+	public Comment(int id, String content, int userId, int postId) {
+		super();
+		this.id = id;
+		this.content = content;
+		this.created = new Date();
+		this.updated = new Date();
+		this.userId = userId;
+		this.postId = postId;
+	}
 	
 	/*Getters/Setters*/
 	public int getId() {
@@ -34,13 +47,16 @@ public class Comment {
 	public void setUpdated(Date updated) {
 		this.updated = updated;
 	}
-	
-	/*Constructor*/
-	public Comment(int id, String content) {
-		super();
-		this.id = id;
-		this.content = content;
-		this.created = new Date();
-		this.updated = new Date();
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+	public int getPostId() {
+		return postId;
+	}
+	public void setPostId(int postId) {
+		this.postId = postId;
 	}
 }

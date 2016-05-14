@@ -13,13 +13,13 @@ public class Album {
 	private int userId;
 	
 	/*Constructor*/
-	public Album(int id, String title, int userId) {
+	public Album(int id, String title, List<Picture> pictures, int userId) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.created = new Date();
 		this.updated = new Date();
-		this.pictures = null;
+		this.pictures = pictures;
 		this.userId = userId;
 	}
 	

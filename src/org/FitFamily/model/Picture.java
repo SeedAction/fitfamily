@@ -8,15 +8,17 @@ public class Picture {
 	private String title;
 	private Date created;
 	private Date updated;
+	private int userId;
 	private int albumId;
 	
 	/*Constructor*/
-	public Picture(int id, String title, int albumId) {
+	public Picture(int id, String title, int userId, int albumId) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.created = new Date();
 		this.updated = new Date();
+		this.userId = userId;
 		this.albumId = albumId;
 	}
 
@@ -44,6 +46,12 @@ public class Picture {
 	}
 	public void setUpdated(Date updated) {
 		this.updated = updated;
+	}
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 	public int getAlbumId() {
 		return albumId;

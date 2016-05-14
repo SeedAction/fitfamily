@@ -6,6 +6,8 @@ import java.util.List;
 public class User {
 	/*Properties*/
 	private int id;
+	private String pseudo;
+	private String password;
 	private String name;
 	private String lastname;
 	private String email;
@@ -15,11 +17,17 @@ public class User {
 	private List<User> friends;
 	private List<Album> albums;
 	private List<Post> posts;
+	private List<Comment> comments;
 	
-	/*Constructor*/
-	public User(int id, String name, String lastname, String email, Date birthdate) {
+	/*Constructors*/
+	public User() {
+	}
+	
+	public User(int id, String pseudo, String password, String name, String lastname, String email, Date birthdate) {
 		super();
 		this.id = id;
+		this.pseudo = pseudo;
+		this.password = password;
 		this.name = name;
 		this.lastname = lastname;
 		this.email = email;
@@ -29,6 +37,7 @@ public class User {
 		this.friends = null;
 		this.albums = null;
 		this.posts = null;
+		this.comments = null;
 	}
 	
 	/*Getters/Setters*/
@@ -37,6 +46,18 @@ public class User {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public String getPseudo() {
+		return pseudo;
+	}
+	public void setPseudo(String pseudo) {
+		this.pseudo = pseudo;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getName() {
 		return name;
@@ -91,5 +112,11 @@ public class User {
 	}
 	public void setPosts(List<Post> posts) {
 		this.posts = posts;
-	}	
+	}
+	public List<Comment> getComments() {
+		return comments;
+	}
+	public void setComments(List<Comment> comments) {
+		this.comments = comments;
+	}
 }
