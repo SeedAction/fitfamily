@@ -15,6 +15,7 @@ public class User {
 	private Date created;
 	private Date updated;
 	private List<User> friends;
+	private List<FriendRequest> requests;
 	private List<Album> albums;
 	private List<Post> posts;
 	private List<Comment> comments;
@@ -35,6 +36,7 @@ public class User {
 		this.created = new Date();
 		this.updated = new Date();
 		this.friends = null;
+		this.requests = null;
 		this.albums = null;
 		this.posts = null;
 		this.comments = null;
@@ -100,6 +102,12 @@ public class User {
 	}
 	public void setFriends(List<User> friends) {
 		this.friends = friends;
+	}
+	public List<FriendRequest> getRequests() {
+		return requests;
+	}
+	public void setRequests(List<FriendRequest> requests) {
+		this.requests = requests;
 	}
 	public List<Album> getAlbums() {
 		return albums;
