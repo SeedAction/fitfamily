@@ -13,6 +13,6 @@ public class UserController extends HttpServlet {
 	//TODO: Change following function to match context
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		//request.setAttribute("images", filledImages("images"));
-		request.getRequestDispatcher("/profile.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/views/profile.jsp").forward(request, response);
 	}
 }
