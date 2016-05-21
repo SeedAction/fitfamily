@@ -9,7 +9,7 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="<c:url value="/fitFamily" />">FitFamily</a>
+			<a class="navbar-brand" href="<c:url value="/home" />">FitFamily</a>
 		</div>
 
 		<div class="collapse navbar-collapse"
@@ -17,7 +17,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><c:choose>
 						<c:when test="${empty sessionScope.user}">
-							<a href="<c:url value="/signUp" />">Inscription</a>
+							<a href="<c:url value="/signup" />">Registration</a>
 						</c:when>
 						<c:otherwise>
 							<a href="<c:url value="/profile.jsp" />">Profile</a>

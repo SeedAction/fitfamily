@@ -14,6 +14,17 @@
   </servlet-mapping>
   <!-- The Home servlet - END -->
   
+  <!-- The SignUp servlet - BEGIN -->
+  <servlet>
+  	<servlet-name>SignUp</servlet-name>
+  	<servlet-class>org.FitFamily.controller.SignUpController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SignUp</servlet-name>
+  	<url-pattern>/signup</url-pattern>
+  </servlet-mapping>
+  <!-- The Home servlet - END -->
+  
   <!-- The User servlet - BEGIN -->
   <servlet>
   	<servlet-name>User</servlet-name>

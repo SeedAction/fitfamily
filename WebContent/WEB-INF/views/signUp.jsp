@@ -2,46 +2,45 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-<title>FitFamily: Inscription</title>
-<c:import url="component/headContent.jsp" />
+<title>FitFamily: Registration</title>
+<c:import url="../../component/headContent.jsp" />
 </head>
 <body>
-	<c:import url="component/navigationBar.jsp" />
+	<c:import url="../../component/navigationBar.jsp" />
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Inscription</h2>
+				<h2>Registration</h2>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<p>
-					<span class="label label-danger">${error}</span>
-				</p>
-			</div>
-		</div>
-		<form method="post" action="signUp">
+		<form method="post" action="signup">
 			<div class="form-group">
-				<label for="pseudonym">Pseudo</label> <input type="text"
-					class="form-control" id="pseudo" name="pseudo"
-					placeholder="pseudonym" value="${param.pseudo}">
+				<label for="pseudo">Pseudo</label>
+				<input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudo" value="${param.pseudo}">
+				<span class="error">${errors['pseudo'] }</span>
 			</div>
 			<div class="form-group">
-				<label for="email">Adresse email</label> <input type="email"
-					class="form-control" id="email" name="email" placeholder="Email"
-					value="${param.mail}">
+				<label for="email">Email address</label>
+				<input type="email" class="form-control" id="email" name="email" placeholder="Email" value="${param.mail}">
+				<span class="error">${errors['email'] }</span>
 			</div>
 			<div class="form-group">
-				<label for="password">Mot de passe</label> <input type="password"
-					class="form-control" id="password" name="password"
-					placeholder="Password" value="${param.password}">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" id="password" name="password" placeholder="Password" value="${param.password}">
+				<span class="error">${errors['password'] }</span>
+			</div>
+			<div class="form-group">
+				<label for="password-confirmation">Confirm password</label>
+				<input type="password" class="form-control" id="password-confirmation" name="password-confirmation" placeholder="Password confirmation" value="${param.password}">
+				<span class="error">${errors['confirmation'] }</span>
 			</div>
 			<div class="checkbox">
-				<label for="cgu"> <input type="checkbox" id="cgu" name="cgu"
-					${param.cgu == "on" ? "checked":""}> J'ai bien lu les CGU
+				<label for="gtu">
+					<input type="checkbox" id="gtu" name="gtu" ${param.gtu == "on" ? "checked":""}> I've read the General Terms of Use
 				</label>
 			</div>
-			<button type="submit" class="btn btn-default">Inscription</button>
+			<button type="submit" class="btn btn-default">Sign Up!</button>
+			<span class="result"><c:out value="${result}"/></span>
 		</form>
 	</div>
 </body>
