@@ -23,7 +23,7 @@
   	<servlet-name>SignUp</servlet-name>
   	<url-pattern>/signup</url-pattern>
   </servlet-mapping>
-  <!-- The Home servlet - END -->
+  <!-- The SignUp servlet - END -->
   
   <!-- The User servlet - BEGIN -->
   <servlet>

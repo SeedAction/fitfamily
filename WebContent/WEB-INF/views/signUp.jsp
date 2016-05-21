@@ -16,22 +16,22 @@
 		<form method="post" action="signup">
 			<div class="form-group">
 				<label for="pseudo">Pseudo</label>
-				<input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudo" value="${param.pseudo}">
+				<input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="Pseudo" value="<c:out value="${param.pseudo}"/>"/>
 				<span class="error">${errors['pseudo'] }</span>
 			</div>
 			<div class="form-group">
 				<label for="email">Email address</label>
-				<input type="email" class="form-control" id="email" name="email" placeholder="Email" value="${param.mail}">
+				<input type="text" class="form-control" id="email" name="email" placeholder="Email" value="<c:out value="${param.email}"/>"/>
 				<span class="error">${errors['email'] }</span>
 			</div>
 			<div class="form-group">
 				<label for="password">Password</label>
-				<input type="password" class="form-control" id="password" name="password" placeholder="Password" value="${param.password}">
+				<input type="password" class="form-control" id="password" name="password" placeholder="Password" value=""/>
 				<span class="error">${errors['password'] }</span>
 			</div>
 			<div class="form-group">
 				<label for="password-confirmation">Confirm password</label>
-				<input type="password" class="form-control" id="password-confirmation" name="password-confirmation" placeholder="Password confirmation" value="${param.password}">
+				<input type="password" class="form-control" id="password-confirmation" name="password-confirmation" placeholder="Password confirmation" value=""/>
 				<span class="error">${errors['confirmation'] }</span>
 			</div>
 			<div class="checkbox">
@@ -40,7 +40,7 @@
 				</label>
 			</div>
 			<button type="submit" class="btn btn-default">Sign Up!</button>
-			<span class="result"><c:out value="${result}"/></span>
+			<p class="${empty errors ? 'success' : 'error'}"> ${result} </p>
 		</form>
 	</div>
 </body>
