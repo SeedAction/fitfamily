@@ -12,18 +12,6 @@ public class Post {
 	private Date updated;
 	private List<Comment> comments;
 	private int userId;
-	
-	/*Constructor*/
-	public Post(int id, String title, String content, int userId) {
-		super();
-		this.id = id;
-		this.title = title;
-		this.content = content;
-		this.created = new Date();
-		this.updated = new Date();
-		this.comments = null;
-		this.userId = userId;
-	}
 
 	/*Getters/Setters*/
 	public int getId() {

@@ -11,18 +11,6 @@ public class FriendRequest {
 	private Boolean acknowledged;
 	private int senderId;
 	private int recipientId;
-	
-	/*Constructors*/
-	public FriendRequest(int id, String message, Date created, int senderId, int recipientId) {
-		super();
-		this.id = id;
-		this.message = message;
-		this.created = created;
-		this.accepted = false;
-		this.acknowledged = false;
-		this.senderId = senderId;
-		this.recipientId = recipientId;
-	}
 
 	/*Getters/Setters*/
 	public int getId() {

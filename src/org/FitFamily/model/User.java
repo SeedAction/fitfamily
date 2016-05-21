@@ -20,28 +20,6 @@ public class User {
 	private List<Post> posts;
 	private List<Comment> comments;
 	
-	/*Constructors*/
-	public User() {
-	}
-	
-	public User(int id, String pseudo, String password, String name, String lastname, String email, Date birthdate) {
-		super();
-		this.id = id;
-		this.pseudo = pseudo;
-		this.password = password;
-		this.name = name;
-		this.lastname = lastname;
-		this.email = email;
-		this.birthdate = birthdate;
-		this.created = new Date();
-		this.updated = new Date();
-		this.friends = null;
-		this.requests = null;
-		this.albums = null;
-		this.posts = null;
-		this.comments = null;
-	}
-	
 	/*Getters/Setters*/
 	public int getId() {
 		return id;

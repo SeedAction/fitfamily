@@ -11,17 +11,6 @@ public class Picture {
 	private int userId;
 	private int albumId;
 	
-	/*Constructor*/
-	public Picture(int id, String title, int userId, int albumId) {
-		super();
-		this.id = id;
-		this.title = title;
-		this.created = new Date();
-		this.updated = new Date();
-		this.userId = userId;
-		this.albumId = albumId;
-	}
-
 	/*Getters/Setters*/
 	public int getId() {
 		return id;

@@ -12,17 +12,6 @@ public class Album {
 	private List<Picture> pictures;
 	private int userId;
 	
-	/*Constructor*/
-	public Album(int id, String title, List<Picture> pictures, int userId) {
-		super();
-		this.id = id;
-		this.title = title;
-		this.created = new Date();
-		this.updated = new Date();
-		this.pictures = pictures;
-		this.userId = userId;
-	}
-	
 	/*Getters/Setters*/
 	public int getId() {
 		return id;

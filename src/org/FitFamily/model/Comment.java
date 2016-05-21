@@ -11,17 +11,6 @@ public class Comment {
 	private int userId;
 	private int postId;
 	
-	/*Constructor*/
-	public Comment(int id, String content, int userId, int postId) {
-		super();
-		this.id = id;
-		this.content = content;
-		this.created = new Date();
-		this.updated = new Date();
-		this.userId = userId;
-		this.postId = postId;
-	}
-	
 	/*Getters/Setters*/
 	public int getId() {
 		return id;
